@@ -27,11 +27,28 @@ console.log(myArray2);
 
 let differenza = numeroElementiArray1 - numeroElementiArray2
 if (differenza > 0){
-    console.log('il primo array è più lungo del secondo');
+    console.log(`il primo array è più lungo di ${differenza} elementi rispetto al secondo`);
+    while (differenza>0){
+        let numeroRandom = Math.ceil(Math.random()*10);
+        myArray2.push(numeroRandom);
+        console.log(`è stato aggiunto il numero ${numeroRandom} all'array`);
+        differenza--
+    }
+    console.log(`ora il secondo array è formato dallo stesso numeri di elementi del primo`);
     
 } else if (differenza < 0) {
-    console.log('il secondo array è più lungo del primo');
+    console.log(`il secondo array è più lungo di ${differenza} elementi rispetto al primo`);
+    while (differenza>0){
+        let numeroRandom = Math.ceil(Math.random()*10);
+        myArray1.push(numeroRandom);
+        console.log(`è stato aggiunto il numero ${numeroRandom} all'array`);
+        differenza--
+    }
+    console.log(`ora il primo array è formato dallo stesso numeri di elementi del secondo`);
 
 } else {
     console.log('Gli array hanno la stessa lunghezza');
 }
+
+console.log(myArray1);
+console.log(myArray2);
