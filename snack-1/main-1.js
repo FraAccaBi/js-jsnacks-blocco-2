@@ -8,9 +8,15 @@ Esegui questo programma in due versioni, con il for e con il while.
 let somma = 0;
 let index = 0;
 let numero = 0;
-while (index < 5){
+/* while (index < 5){
     numero = Number(prompt('inserisci un numero'));
     somma += numero;
     index++
+}
+console.log(somma); */
+
+for (let i=0; i<5; i++){
+    numero = Number(prompt('inserisci numero'));
+    somma += numero
 }
 console.log(somma);
